@@ -1,0 +1,19 @@
+version: '2'
+services:
+  build_openupgrade:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: openupgrade
+  openupgrade:
+    image: openupgrade
+    container_name: openupgrade
+    depends_on:
+      - build_openupgrade
+    command: >
+      sh -c "${PIP} install -r ${BASE_DIR}/${TARGET_VERSION}/requirements.txt
+      &&  python ${BASE_DIR}/${TARGET_VERSION}/migrate.py --config=${CONFIG_FILE} --database=${DB_NAME} --run-migrations=${TARGET_VERSION} --branch-dir=${BRANCH_DIR}"
+    volumes:
+      - .:/openupgrade
+      - /tmp/openupgrade:/var/tmp/openupgrade
+      - ./openupgrade/${TARGET_VERSION}:${BASE_DIR}/${TARGET_VERSION}
