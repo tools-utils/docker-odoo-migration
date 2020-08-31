@@ -17,3 +17,15 @@ services:
       - .:/openupgrade
       - /tmp/openupgrade:/var/tmp/openupgrade
       - ./openupgrade/${TARGET_VERSION}:${BASE_DIR}/${TARGET_VERSION}
+  db:
+    image: postgres:10
+    container_name: db
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+  volumes:
+    odoo-db-data:
