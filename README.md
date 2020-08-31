@@ -4,8 +4,8 @@ Run odoo database migration in docker-compose
 # About
 - This repository is a `docker-compose` to mirgate `odoo` `9.0` to `odoo` `13.0` based on the following resources published by [dhruvadave5297](https://medium.com/@dhruvadave5297)
 
-[Odoo Database Migration](https://medium.com/@dhruvadave5297/odoo-database-migration-3df0050a231c)
-[migrate.py](https://gist.github.com/DhruvaDave/67be77caf492aa09cdb84c7c51d5ee39)
+- [Odoo Database Migration](https://medium.com/@dhruvadave5297/odoo-database-migration-3df0050a231c)
+- [migrate.py](https://gist.github.com/DhruvaDave/67be77caf492aa09cdb84c7c51d5ee39)
 
 # Migrate odoo `9.0` to `10.0`
 
