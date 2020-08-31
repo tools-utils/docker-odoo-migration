@@ -9,7 +9,7 @@ This repository is a `docker-compose` to mirgate `odoo` `9.0` to `odoo` `13.0` b
 
 # Usage
 
-- Export `odoo` `9.0` database in `prodoction` environment
+- Export `odoo` `9.0` database in `production` environment
 - Using `pg_dump` to export the datbase
 
 ```
