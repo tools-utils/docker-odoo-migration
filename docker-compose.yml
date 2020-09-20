@@ -26,6 +26,4 @@ services:
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
-  volumes:
-    odoo-db-data:
+      - ./pgdata:/var/lib/postgresql/data/pgdata
